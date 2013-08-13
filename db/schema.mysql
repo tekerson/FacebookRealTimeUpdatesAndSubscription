@@ -1,0 +1,12 @@
+CREATE  TABLE users (
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    fb_id VARCHAR(64),
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    friends TEXT,
+    fb_access_token VARCHAR(255),
+    fb_access_token_expires INTEGER,
+
+    PRIMARY KEY (id) ,
+    UNIQUE INDEX fb_id_UNIQUE (fb_id ASC)
+);
