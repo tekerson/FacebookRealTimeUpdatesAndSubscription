@@ -77,7 +77,7 @@ $app->post('/subscriptions', function () use ($app, $c) {
      
     $expected = 'sha1=' . hash_hmac('sha1', $body, $facebook->getApiSecret());
      
-    if ($signature != $signature) {
+    if ($signature != $expected) {
         exit();
     }
     // We're okay to proceed
